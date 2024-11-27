@@ -59,6 +59,9 @@ with final.pkgs.lib; let
     statuscol-nvim # Status column | https://github.com/luukvbaal/statuscol.nvim/
     nvim-treesitter-context # nvim-treesitter-context
     # ^ UI
+    # themeing
+    tokyonight-nvim
+    # ^themeing
     # language support
     # ^ language support
     # navigation/editing enhancement plugins
@@ -87,6 +90,7 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+    dark-notify # System theme detector
   ];
 in {
   # This is the neovim derivation

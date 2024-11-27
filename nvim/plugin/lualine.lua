@@ -83,5 +83,15 @@ require('lualine').setup {
       },
     },
   },
+  inactive_winbar = {
+    lualine_z = {
+      {
+        'filename',
+        path = 1,
+        file_status = true,
+        newfile_status = true,
+      },
+    },
+  },
   extensions = { 'fugitive', 'fzf', 'toggleterm', 'quickfix' },
 }

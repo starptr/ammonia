@@ -12,6 +12,7 @@
     #   url = "github:Cassin01/wf.nvim";
     #   flake = false;
     # };
+    soup.url = "github:starptr/soup";
   };
 
   outputs = inputs @ {
@@ -19,6 +20,7 @@
     nixpkgs,
     flake-utils,
     gen-luarc,
+    soup,
     ...
   }: let
     supportedSystems = [
@@ -41,6 +43,10 @@
           # containing the Neovim API all plugins in the workspace directory.
           # The generated file can be symlinked in the devShell's shellHook.
           gen-luarc.overlays.default
+
+          (self: super: {
+            dark-notify = soup.packages.${system}.dark-notify;
+          })
         ];
       };
       shell = pkgs.mkShell {
