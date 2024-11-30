@@ -7,7 +7,13 @@ local function trim6(s)
    return s:match'^()%s*$' and '' or s:match'^%s*(.*%S)'
 end
 
-local res = vim.system({'dark-notify', '--exit'}, { text = true }):wait()
+local is_success, res = pcall(function () vim.system({'dark-notify', '--exit'}, { text = true }):wait() end)
+-- Exit if the command fails
+if not is_success then
+  require('user.util').notify("Couldn't detect sys theme", vim.log.levels.WARN)
+  vim.cmd.colorscheme('tokyonight')
+  return
+end
 
 if trim6(res.stdout) == 'light' then
   require('tokyonight').setup({

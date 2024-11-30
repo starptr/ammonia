@@ -90,6 +90,7 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
+  ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
     dark-notify # System theme detector
   ];
 in {
