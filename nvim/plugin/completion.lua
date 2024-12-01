@@ -25,8 +25,9 @@ local function complete_with_source(source)
 end
 
 cmp.setup {
+  --preselect = cmp.PreselectMode.None,
   completion = {
-    completeopt = 'menu,menuone,noinsert',
+    --completeopt = 'menu,menuone,noinsert',
     -- autocomplete = false,
   },
   formatting = {
@@ -56,13 +57,13 @@ cmp.setup {
     ["<CR>"] = cmp.mapping({
       i = function(fallback)
         if cmp.visible() and cmp.get_active_entry() then
-          cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+          cmp.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = false })
         else
           fallback()
         end
       end,
-      s = cmp.mapping.confirm({ select = true }),
-      c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+      s = cmp.mapping.confirm({ select = false }),
+      c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = false }),
     }),
     ['<C-b>'] = cmp.mapping(function(_)
       if cmp.visible() then
