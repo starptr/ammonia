@@ -79,28 +79,47 @@ cmp.setup {
         complete_with_source('path')
       end
     end, { 'i', 'c', 's' }),
-    ['<C-n>'] = cmp.mapping(function(fallback)
+    ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
-        cmp.select_next_item()
-      -- expand_or_jumpable(): Jump outside the snippet region
-      -- expand_or_locally_jumpable(): Only jump inside the snippet region
-      elseif luasnip.expand_or_locally_jumpable() then
-        luasnip.expand_or_jump()
+        cmp.select_next_item({
+          behavior = cmp.SelectBehavior.Select, -- Highlighting (i.e. selecting) a completion entry doesn't already insert the text in the buffer
+        })
       elseif has_words_before() then
         cmp.complete()
       else
-        fallback()
+        fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
       end
-    end, { 'i', 'c', 's' }),
-    ['<C-p>'] = cmp.mapping(function(fallback)
+    end, { "i", "s" }),
+
+    ["<S-Tab>"] = cmp.mapping(function()
       if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
+        cmp.select_prev_item({
+          behavior = cmp.SelectBehavior.Select,
+        })
       end
-    end, { 'i', 'c', 's' }),
+    end, { "i", "s" }),
+    --['<C-n>'] = cmp.mapping(function(fallback)
+    --  if cmp.visible() then
+    --    cmp.select_next_item()
+    --  -- expand_or_jumpable(): Jump outside the snippet region
+    --  -- expand_or_locally_jumpable(): Only jump inside the snippet region
+    --  elseif luasnip.expand_or_locally_jumpable() then
+    --    luasnip.expand_or_jump()
+    --  elseif has_words_before() then
+    --    cmp.complete()
+    --  else
+    --    fallback()
+    --  end
+    --end, { 'i', 'c', 's' }),
+    --['<C-p>'] = cmp.mapping(function(fallback)
+    --  if cmp.visible() then
+    --    cmp.select_prev_item()
+    --  elseif luasnip.jumpable(-1) then
+    --    luasnip.jump(-1)
+    --  else
+    --    fallback()
+    --  end
+    --end, { 'i', 'c', 's' }),
     -- toggle completion
     ['<C-e>'] = cmp.mapping(function(_)
       if cmp.visible() then
