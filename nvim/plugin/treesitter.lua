@@ -50,10 +50,10 @@ configs.setup {
     swap = {
       enable = true,
       swap_next = {
-        ['<leader>a'] = '@parameter.inner',
+        ['<leader>tsa'] = '@parameter.inner',
       },
       swap_previous = {
-        ['<leader>A'] = '@parameter.inner',
+        ['<leader>tsA'] = '@parameter.inner',
       },
     },
     move = {
