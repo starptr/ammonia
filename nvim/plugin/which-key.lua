@@ -7,10 +7,10 @@ require('which-key').setup {
     {
       "<leader>ts", group = "[T]ree[s]itter",
     },
-    { "<leader><leader>e", function()
+    { "<leader>fe", function()
       nvim_tree_api.tree.toggle()
       --nvim_tree_api.tree.reload()
-      end, desc = "[nvim-tree] toggle [e]xplorer"
+      end, desc = "[nvim-tree] toggle [f]ile [e]xplorer"
     },
     {
       "<leader>wh", '<C-w>h', desc = "goto left window"
@@ -23,6 +23,15 @@ require('which-key').setup {
     },
     {
       "<leader>wl", '<C-w>l', desc = "goto right window"
+    },
+    {
+      "<leader><leader>y", '"+y', mode = 'x', desc = "[y]ank to clipboard"
+    },
+    {
+      "<leader><leader>p", '"+p', mode = 'x', desc = "[p]aste from clipboard"
+    },
+    {
+      "<leader><leader>P", '"+P', mode = 'x', desc = "[P]aste from clipboard after cursor"
     },
   },
 }

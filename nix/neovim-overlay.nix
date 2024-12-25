@@ -88,7 +88,7 @@ with final.pkgs.lib; let
     which-key-nvim
   ] ++ pkgs.lib.optionals pkgs.stdenv.isDarwin [
     {
-      plugin = "test-the";
+      plugin = "expose-dark-notify";
       config = ''
         lua << EOF
           vim.g.exe_dark_notify = "${pkgs.dark-notify}/bin/dark-notify"

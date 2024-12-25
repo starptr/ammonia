@@ -198,3 +198,6 @@ keymap.set('n', '<C-b>', '<C-b>zz', { desc = 'move UP full-page and center' })
 --     vim.opt.hlsearch = vim.tbl_contains({ '<CR>', 'n', 'N', '*', '#', '?', '/' }, vim.fn.keytrans(char))
 --   end
 -- end, auto_hlsearch_namespace)
+
+-- This gets eaten by Alacritty
+keymap.set('v', '<M-c>', '"+y', { desc = 'yank to [c]lipboard' })

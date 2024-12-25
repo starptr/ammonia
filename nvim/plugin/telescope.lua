@@ -72,11 +72,11 @@ end
 vim.keymap.set('n', '<leader>tp', function()
   builtin.find_files()
 end, { desc = '[t]elescope find files - ctrl[p] style' })
-vim.keymap.set('n', '<M-p>', builtin.oldfiles, { desc = '[telescope] old files' })
-vim.keymap.set('n', '<C-g>', builtin.live_grep, { desc = '[telescope] live grep' })
+vim.keymap.set('n', '<leader>tP', builtin.oldfiles, { desc = '[t]elescope [P]reviously opened files' })
+vim.keymap.set('n', '<leader>t<c-g>', builtin.live_grep, { desc = '[t]elescope live <g>rep' })
 vim.keymap.set('n', '<leader>tf', fuzzy_grep, { desc = '[t]elescope [f]uzzy grep' })
-vim.keymap.set('n', '<M-f>', fuzzy_grep_current_file_type, { desc = '[telescope] fuzzy grep filetype' })
-vim.keymap.set('n', '<M-g>', live_grep_current_file_type, { desc = '[telescope] live grep filetype' })
+vim.keymap.set('n', '<leader>t<M-f>', fuzzy_grep_current_file_type, { desc = '[t]elescope <f>uzzy grep on current filetype' })
+vim.keymap.set('n', '<leader>t<M-g>', live_grep_current_file_type, { desc = '[t]elescope live <g>rep on current filetype' })
 vim.keymap.set(
   'n',
   '<leader>t*',
