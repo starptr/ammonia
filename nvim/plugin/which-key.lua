@@ -1,6 +1,5 @@
 local nvim_tree_api = require('nvim-tree.api')
 
-
 require('which-key').setup {
   preset = 'helix',
   spec = {
@@ -8,8 +7,8 @@ require('which-key').setup {
       "<leader>ts", group = "[T]ree[s]itter",
     },
     { "<leader>fe", function()
-      nvim_tree_api.tree.toggle()
-      --nvim_tree_api.tree.reload()
+        nvim_tree_api.tree.toggle()
+        --nvim_tree_api.tree.reload()
       end, desc = "[nvim-tree] toggle [f]ile [e]xplorer"
     },
     {
@@ -33,6 +32,18 @@ require('which-key').setup {
     {
       "<leader><leader>P", '"+P', mode = 'n', desc = "[P]aste from clipboard after cursor"
     },
+    -- s for :set (toggle popular options)
+    {
+      "<leader>sw", function()
+        vim.o.wrap = not vim.o.wrap
+      end, mode = 'n', desc = "[s]et toggle [w]rap"
+    },
+    {
+      "<leader>sr", function ()
+        vim.o.relativenumber = not vim.o.relativenumber
+      end, mode = 'n', desc = "[s]et toggle [r]elativenumber"
+    },
+    -- TODO: hardwrap
   },
   notify = true, -- Warn about mapping issues
   keys = {

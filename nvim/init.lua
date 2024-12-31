@@ -102,3 +102,7 @@ cmd.packadd('cfilter') -- Allows filtering the quickfix list with :cfdo
 
 -- let sqlite.lua (which some plugins depend on) know where to find sqlite
 vim.g.sqlite_clib_path = require('luv').os_getenv('LIBSQLITE')
+
+-- Show the @ char when softwrap is disabled
+-- TODO: fix this
+--opt.display = 'truncate'

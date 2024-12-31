@@ -86,7 +86,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     keymap.set('n', '<leader>l<space>wl', function()
       vim.print(vim.lsp.buf.list_workspace_folders())
     end, desc('[lsp] [w]orkspace folders [l]ist'))
-    keymap.set('n', '<leader>l<space>rn', vim.lsp.buf.rename, desc('lsp [r]e[n]ame'))
+    keymap.set('n', '<leader>lrn', vim.lsp.buf.rename, desc('lsp [r]e[n]ame'))
     keymap.set('n', '<leader>l<space>wq', vim.lsp.buf.workspace_symbol, desc('lsp [w]orkspace symbol [q]'))
     keymap.set('n', '<leader>l<space>dd', vim.lsp.buf.document_symbol, desc('lsp [dd]ocument symbol'))
     keymap.set('n', '<leader>l<M-CR>', vim.lsp.buf.code_action, desc('[lsp] code action'))
