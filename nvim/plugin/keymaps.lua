@@ -181,10 +181,10 @@ end
 
 keymap.set('n', '<leader>S', toggle_spell_check, { noremap = true, silent = true, desc = 'toggle [S]pell' })
 
-keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'move [d]own half-page and center' })
-keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'move [u]p half-page and center' })
-keymap.set('n', '<C-f>', '<C-f>zz', { desc = 'move DOWN [f]ull-page and center' })
-keymap.set('n', '<C-b>', '<C-b>zz', { desc = 'move UP full-page and center' })
+--keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'move [d]own half-page and center' })
+--keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'move [u]p half-page and center' })
+--keymap.set('n', '<C-f>', '<C-f>zz', { desc = 'move DOWN [f]ull-page and center' })
+--keymap.set('n', '<C-b>', '<C-b>zz', { desc = 'move UP full-page and center' })
 
 --- Disabled keymaps [enable at your own risk]
 

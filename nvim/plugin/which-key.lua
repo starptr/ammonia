@@ -28,10 +28,15 @@ require('which-key').setup {
       "<leader><leader>y", '"+y', mode = 'x', desc = "[y]ank to clipboard"
     },
     {
-      "<leader><leader>p", '"+p', mode = 'x', desc = "[p]aste from clipboard"
+      "<leader><leader>p", '"+p', mode = 'n', desc = "[p]aste from clipboard"
     },
     {
-      "<leader><leader>P", '"+P', mode = 'x', desc = "[P]aste from clipboard after cursor"
+      "<leader><leader>P", '"+P', mode = 'n', desc = "[P]aste from clipboard after cursor"
     },
+  },
+  notify = true, -- Warn about mapping issues
+  keys = {
+    scroll_down = "<c-d>",
+    scroll_up = "<c-u>",
   },
 }

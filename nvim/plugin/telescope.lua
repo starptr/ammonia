@@ -69,9 +69,9 @@ local function fuzzy_grep_current_file_type()
   grep_current_file_type(fuzzy_grep)
 end
 
-vim.keymap.set('n', '<leader>tp', function()
+vim.keymap.set('n', '<M-p>', function()
   builtin.find_files()
-end, { desc = '[t]elescope find files - ctrl[p] style' })
+end, { desc = '[telescope] find files - ctrl<p> style' })
 vim.keymap.set('n', '<leader>tP', builtin.oldfiles, { desc = '[t]elescope [P]reviously opened files' })
 vim.keymap.set('n', '<leader>t<c-g>', builtin.live_grep, { desc = '[t]elescope live <g>rep' })
 vim.keymap.set('n', '<leader>tf', fuzzy_grep, { desc = '[t]elescope [f]uzzy grep' })

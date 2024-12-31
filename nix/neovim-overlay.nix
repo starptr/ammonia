@@ -64,6 +64,7 @@ with final.pkgs.lib; let
     tokyonight-nvim
     # ^themeing
     # language support
+    rustaceanvim
     # ^ language support
     # navigation/editing enhancement plugins
     vim-unimpaired # predefined ] and [ navigation keymaps | https://github.com/tpope/vim-unimpaired/
