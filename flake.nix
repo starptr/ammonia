@@ -12,6 +12,16 @@
     #   url = "github:Cassin01/wf.nvim";
     #   flake = false;
     # };
+    go-nvim = {
+      url = "github:ray-x/go.nvim";
+      flake = false;
+    };
+
+    guihua = {
+      url = "github:ray-x/guihua.lua";
+      flake = false;
+    };
+
     soup.url = "github:starptr/soup";
   };
 

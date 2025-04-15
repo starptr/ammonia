@@ -507,6 +507,38 @@
         "type": "github"
       }
     },
+    "go-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1743852392,
+        "narHash": "sha256-/zkJ+5hmnRNRNYCcpGX1ypUcL7Qe4sXlb25Bahczi8s=",
+        "owner": "ray-x",
+        "repo": "go.nvim",
+        "rev": "9a6dfa5d741cdc8ff11d87bbeaca568733a1aca2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ray-x",
+        "repo": "go.nvim",
+        "type": "github"
+      }
+    },
+    "guihua": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1730516234,
+        "narHash": "sha256-XpUsbj1boDfbyE8C6SdOvZdkd97682VVC81fvQ5WA/4=",
+        "owner": "ray-x",
+        "repo": "guihua.lua",
+        "rev": "d783191eaa75215beae0c80319fcce5e6b3beeda",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ray-x",
+        "repo": "guihua.lua",
+        "type": "github"
+      }
+    },
     "libgit2": {
       "flake": false,
       "locked": {
@@ -975,6 +1007,8 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "gen-luarc": "gen-luarc",
+        "go-nvim": "go-nvim",
+        "guihua": "guihua",
         "nixpkgs": "nixpkgs_2",
         "soup": "soup"
       }

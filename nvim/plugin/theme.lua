@@ -10,6 +10,9 @@ end
 -- Exit if dark-notify doesn't exist
 if vim.g.exe_dark_notify == nil then
   require('user.util').notify("Couldn't detect sys theme", vim.log.levels.WARN)
+  require('tokyonight').setup({
+    style = 'night',
+  })
   vim.cmd.colorscheme('tokyonight')
   return
 end
